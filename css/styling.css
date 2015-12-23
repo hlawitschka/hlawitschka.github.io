@@ -1,0 +1,50 @@
+html, body {
+	background: rgb(20,20,20);
+	height: 100%;
+	overflow: hidden;
+}
+
+.svg-wrapper {
+	display: inline;
+	position: relative;
+	/*transform: translateY(-50%);*/
+	margin: 0 auto;
+	width: 520px;  
+}
+
+.shape {
+	stroke-dasharray: 150 1000;
+	stroke-dashoffset: -780;
+	stroke-width: 8px;
+	fill: transparent;
+	stroke: #19f6e8;
+	border-bottom: 5px solid black;
+	transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s, fill 1s;
+}
+
+.logo {
+	font-family: 'Times';
+	font-size: 40px;
+	line-height: 6px;
+	letter-spacing: 8px;
+	color: #fff;
+	top: -44px;
+	position: relative;
+	text-align: center;
+}
+
+.svg-wrapper:hover .shape {
+	fill: #4c4c4c;
+	stroke-width: 2px;
+	stroke-dashoffset: 00;
+	stroke-dasharray: 1200;
+}
+
+.text {
+	color: white;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+div {
+	margin-bottom: 10px;
+}
