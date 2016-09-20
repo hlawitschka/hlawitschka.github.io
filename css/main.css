@@ -1107,3 +1107,34 @@ article {
   color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+
+
+/*Mobile responsive styling*/
+
+@media (max-width: 600px) {
+  #hero-area h1{
+    font-size: 35pt;
+  }
+
+  .devider {
+  margin-top: 30px;
+}
+
+.devider:before,
+.devider:after {
+  content: "_______";
+  color: #d4f4cf;
+  position: relative;
+  bottom: 6px;
+}
+
+.devider:before {
+  right: 10px;
+}
+
+.devider:after {
+  left: 10px;
+}
+
+}
