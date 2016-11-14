@@ -584,24 +584,24 @@
 
 
 
-<svg class="peter"></svg>
+<svg class="nflBar"></svg>
 <p>That's it, folks!</p>
 <script>
 
-var width = 200,
-    height = 200;
+var nflBarWidth = 200,
+    nlfBarHeight = 200;
 
 var y = d3.scale.linear()
-    .range([height, 0]);
+    .range([nlfBarHeight, 0]);
 
-var chart = d3.select(".peter")
-    .attr("width", width)
-    .attr("height", height);
+var chart = d3.select(".nflBar")
+    .attr("width", nflBarWidth)
+    .attr("height", nlfBarHeight);
 
 d3.csv("nflBar.csv", type, function(error, data) {
   y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-  var barWidth = width / data.length;
+  var barWidth = nflBarWidth / data.length;
 
   var bar = chart.selectAll("g")
       .data(data)
@@ -610,13 +610,13 @@ d3.csv("nflBar.csv", type, function(error, data) {
 
   bar.append("rect")
       .attr("y", function(d) { return y(d.value); })
-      .attr("height", function(d) { return height - y(d.value); })
+      .attr("height", function(d) { return nlfBarHeight - y(d.value); })
       .attr("width", barWidth - 1)
-      .attr("class", "bar")	;
+      .attr("class", "bar") ;
 
   bar.append("text")
       .attr("x", barWidth / 2)
-      .attr("y", height)
+      .attr("y", nlfBarHeight)
       .attr("dy", "-.25em")
       .text(function(d) { return Math.round((d.value).toFixed(2)*100) + '%'; });
 });
@@ -627,6 +627,7 @@ function type(d) {
 }
 
 </script>
+
 
 
 
