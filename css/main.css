@@ -1186,32 +1186,36 @@ article {
 }
 
 
+	@media (max-width: 999px) {
+	  .screens p, h4 {
+	    display: none;
+	  }
 
-/*Mobile responsive styling*/
+		/*Mobile responsive styling*/
 
-@media (max-width: 600px) {
-  #hero-area h1{
-    font-size: 25pt;
-  }
+		@media (max-width: 600px) {
+		  #hero-area h1{
+		    font-size: 25pt;
+		  }
 
-  .devider {
-  margin-top: 30px;
-}
+		  .devider {
+		  margin-top: 30px;
+		}
 
-.devider:before,
-.devider:after {
-  content: "_______";
-  color: #d4f4cf;
-  position: relative;
-  bottom: 6px;
-}
+		.devider:before,
+		.devider:after {
+		  content: "_______";
+		  color: #d4f4cf;
+		  position: relative;
+		  bottom: 6px;
+		}
 
-.devider:before {
-  right: 10px;
-}
+		.devider:before {
+		  right: 10px;
+		}
 
-.devider:after {
-  left: 10px;
-}
+		.devider:after {
+		  left: 10px;
+		}
 
-}
+		}
