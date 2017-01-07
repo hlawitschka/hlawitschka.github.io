@@ -1190,6 +1190,7 @@ article {
 	  .screens figcaption{
 	    display: none !important;
 	  }
+	}
 
 		/*Mobile responsive styling*/
 
@@ -1200,22 +1201,28 @@ article {
 
 		  .devider {
 		  margin-top: 30px;
-		}
+		  }
 
-		.devider:before,
-		.devider:after {
+		  .devider:before,
+		  .devider:after {
 		  content: "_______";
 		  color: #d4f4cf;
 		  position: relative;
 		  bottom: 6px;
-		}
+		  }
 
-		.devider:before {
+		  .devider:before {
 		  right: 10px;
-		}
+		  }
 
-		.devider:after {
+		  .devider:after {
 		  left: 10px;
+		  }
 		}
 
-		}
+			/*iPhone 5 responsive*/
+			@media (max-width: 330px) {
+			  #hero-area h1{
+			    font-size: 22pt;
+			  }
+	  		}
