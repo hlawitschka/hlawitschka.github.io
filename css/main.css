@@ -1186,9 +1186,9 @@ article {
 }
 
 
-	@media (max-width: 999px) {
-	  .screens p, h4 {
-	    display: none;
+	@media (max-width: 999px) and (min-width: 770px){
+	  .screens figcaption{
+	    display: none !important;
 	  }
 
 		/*Mobile responsive styling*/
