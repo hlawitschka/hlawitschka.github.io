@@ -21,7 +21,7 @@
 	<p>I <a href = 'https://github.com/sneaky-pete/playoffRankings/blob/master/scrape.py'>scraped</a> playoff and seed data (from <a href = 'http://www.sports-reference.com/'>sports-reference</a>) for the four "major" American sports: basketball, football, baseball, and hockey, going back to the 1980s. At first glance, it looks like top-seeded NBA teams have done quite well in the past, whereas the MLB and NHL look to be more of a crapshoot:</p>
 
     <div class = 'row' style = 'margin: 50px 20px 20px 20px'>
-        <div class = 'chartHeader'>How often do various seeds win the championship?</div>
+        <div class = 'chartHeader'>How often does each seed win the championship?</div>
         <svg class="nbaBar"></svg>
         <svg class="nflBar"></svg>
         <svg class="mlbFourBar"></svg>
@@ -245,7 +245,6 @@ function barChart(chart, dataset, chartTitle, fifth = '5th', sixth = '6th'){
 	var x = d3.scale.ordinal()
 		.domain(["1st", "2nd", "3rd", "4th", fifth, sixth])
 		.rangeRoundBands([0, width], .1);
-
 
 	var xAxis = d3.svg.axis()
 	    .scale(x)
