@@ -32,7 +32,7 @@
     
     <p style = 'margin-top: 50px'>I can think of two main reasons why 1-seeds might do better is some sports than others. The first is the sport itself. Some sports are more random than others -- one lucky goal can win a hockey game, whereas one lucky basket doesn't sway the chances of winning as much. The second is the playoff structure. Sports have different rules that govern byes, home field advantage, strength of schedule, and other factors in the playoffs. For example, the top two seeds get a first-round bye in the NFL, the only league that awards byes in the playoffs. </p>
 
-    <p>Anyways, I was curious to look a little more in depth at how all seeds performed in the playoffs so I drew up some Sankey charts for each sport. Hover over the links to see the numbers. </p>
+    <p>Anyways, I was curious to look a little more in depth at how all seeds performed in the playoffs so I drew up some Sankey charts for each sport. Hover over the connecting lines to see the numbers. </p>
 	
     <div id = 'sankeyCharts'>
 		<div class = 'row' style = 'text-align: center'>
@@ -45,7 +45,11 @@
 		</div>
 	</div>
 
-	<p style = 'margin-top: 50px'>You'll notice not all sports have the same sized brackets. Only eight MLB teams (four from each league) make the playoffs, while 16 make if from the NBA. This means NBA and NHL teams have to play more games than MLB and NHL teams to win the championship, increasing the chances that they get upset. To control for this, I calculate win percentage above random (WPAR). So, for the NBA where there are four rounds, we give a random team a 50% chance of winning the game, and (.50)<sup>4</sup>, or a 6.25% chance of winning it all. The top seed wins 70% of the time, so their WPAR is 63.75%. This, in essence, gives due credit to teams that have to play more games to win it all:</p>
+	<p style = 'margin-top: 50px'>Not all sports have the same sized brackets. Only four MLB teams from each league make the playoffs, while 8 make if from the NBA. One implication of this is that the top-ranked NBA and NHL teams have to play more games than the top-ranked MLB and NFL teams to win the championship. Because each additional game is a chance for an upset, we would expect that top-ranked teams will win less often in playoff formats where there are more teams. Controlling for the different playoff bracket sizes will give us a more clear understanding of which <em>sports</em> favor their top-ranked teams the most, rather than which <em>bracket sizes</em> are favorable (a less interesting question).</p>
+
+	<p>To control for the different bracket sizes, I calculate a metric I call win percentage above random (WPAR):</p>
+	<h3 style = 'text-align: center'>WPAR = (True Win Pct) - (0.5<sup># rounds in playoff</sup></h3>
+	This tells us how often a given seed wins the championship compared to how often a random team would the championship if they had to play the same number of games. So, for the NBA where there are four rounds, we give a random team a 50% chance of winning each game and a (.50)<sup>4</sup>, or 6.25%, chance of winning it all. Emperically, the top NBA seed wins 70% of the time, so their WPAR is 63.75%. This gives due credit to teams that have to play more games by making the "penalty" term in the WPAR equation smaller as the number of rounds increases:</p>
 
 
     <div class = 'row' style = 'margin: 50px 20px 20px 20px'>
@@ -56,7 +60,7 @@
         <svg class="nhlWpar"></svg>
     </div>
 
-    <p style = 'margin-top: 50px'>Calculating win percentage above a 50/50 match might not be the correct counterfactual, but it gets us closer. The top seeds that play the extra game win closer to 90% of the time (depending on the sport), so we're taking too much away from NFL and MLB teams that play one fewer game. Even so, NFL 1-seeds still do second best, after NBA 1-seeds, and MLB and NHL fall somewhere thereafter.</p>
+    <p style = 'margin-top: 50px'>Calculating win percentage above a 50/50 match might not be the correct counterfactual, but it gets us closer. Top NBA/NHL seeds that have to play an extra game win about 90% of the time (instead of 50% as I assume in WPAR), so WPAR gives NBA/NHL teams too much credit and over-penalizes NFL/MLB teams. Even so, NFL 1-seeds have the second best WPAR after NBA 1-seeds, and MLB and NHL fall somewhere thereafter.</p>
 
     <p>In the end, it looks like seeding in baseball matters the least. This is interesting because MLB seeding (not to be confused with <a href = http://cdn.fangraphs.com/not/wp-content/uploads/2012/09/BlurHurrHurr.gif>baseball seeding</a>), which is based on an 162-game season should be more accurate than NFL seeding, which is based on a 16-game season. But it's not. And that's <a href = 'https://www.youtube.com/watch?v=b5-iJUuPWis'>why you play the game</a>.</p>
 
