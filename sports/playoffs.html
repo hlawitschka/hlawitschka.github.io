@@ -51,7 +51,7 @@
 
 	<h3 style = 'text-align: center; padding-top: 20px; padding-bottom: 20px; color: grey'>WPAR = (Observed Win %) - (0.5<sup># rounds in playoff</sup>)</h3>
 
-	<p>This tells us how often a given seed wins the championship compared to how often a random team would if they had to play the same number of games. So, for the NBA where there are four rounds, we give a random team a 50% chance of winning each game and a (.50)<sup>4</sup>, or 6.25%, chance of winning it all. Emperically, the top NBA seed wins 70% of the time, so their WPAR is 63.75%. This gives due credit to teams that have to play more games by making the "penalty" term in the WPAR equation smaller as the number of rounds increases:</p>
+	<p>This tells us how often a given seed wins the championship compared to how often a random team would if they had to play the same number of games. So, for the NBA where there are four rounds, we give a random team a 50% chance of winning each game and a (.50)<sup>4</sup>, or 6.25%, chance of winning it all. Emperically, the top NBA seed wins 70% of the time, so their WPAR is 63.75%. This gives due credit to teams that have to play more games by making the "penalty" term in the WPAR equation smaller as the number of rounds increases. Here are the first charts you saw, but recalculated using WPAR instead of simple win percentage:</p>
 
 
     <div class = 'row' style = 'margin: 50px 20px 20px 20px'>
@@ -62,7 +62,8 @@
         <svg class="nhlWpar"></svg>
     </div>
 
-    <p style = 'margin-top: 50px'>Calculating win percentage above a 50/50 match might not be the correct counterfactual, but it gets us closer. Top NBA/NHL seeds, who have to play an extra game, win that game about 90% of the time instead of 50% as I assume in WPAR. This means WPAR gives NBA/NHL teams too much credit and over-penalizes NFL/MLB teams. Even so, NFL 1-seeds have the second best WPAR after NBA 1-seeds, and MLB and NHL fall somewhere thereafter.</p>
+    <p style = 'margin-top: 50px'>Under WPAR, top-seeded NHL teams out-perform top-seeded MLB teams, a switch from when we used simple win percentage!</p>
+	<p>I acknowledge that calculating win percentage above a 50/50 match might not be the correct counterfactual, but it gets us closer. Top NBA/NHL seeds, who have to play an extra game, win that game about 90% of the time instead of 50% as I assume in WPAR. This means WPAR gives NBA/NHL teams too much credit and over-penalizes NFL/MLB teams. Even so, NFL 1-seeds have the second best WPAR after NBA 1-seeds, and MLB and NHL fall somewhere thereafter.</p>
 
     <p>In the end, it looks like seeding in baseball matters the least. This is interesting because MLB seeding (not to be confused with <a href = http://cdn.fangraphs.com/not/wp-content/uploads/2012/09/BlurHurrHurr.gif>baseball seeding</a>), which is based on an 162-game season should be more accurate than NFL seeding, which is based on a 16-game season. But it's not. And that's <a href = 'https://www.youtube.com/watch?v=b5-iJUuPWis'>why you play the game</a>.</p>
 
